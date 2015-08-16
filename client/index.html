@@ -1,0 +1,29 @@
+<head>
+  <base href="/" />
+</head>
+<body ng-app="henry">
+  <ul class="list-unstyled main-nav">
+    <li class="logo"></li>
+    <li ui-sref-active="selected"><a ui-sref="explore">Explore</a></li>
+    <li ui-sref-active="selected"><a ui-sref="profile">My Profile</a></li>
+    <li ui-sref-active="selected"><a ui-sref="jobCart">Job Cart</a></li>
+  </ul>
+  <div ui-view class="main-content"></div>
+  <ul class="list-unstyled main-shortcuts">
+    <li class="profile">
+      <profile-small></profile-small>
+      Lincoln Wang
+    </li>
+    <li class="shortcut-btns">
+      <div class="col-xs-4 shortcut-btn">
+        <img class="center-block" src="images/message.png" alt="" />
+      </div>
+      <div class="col-xs-4 shortcut-btn">
+        <img class="center-block" src="images/friends.png" alt="" />
+      </div>
+      <div class="col-xs-4 shortcut-btn">
+        <img class="center-block" src="images/settings.png" alt="" />
+      </div>
+    </li>
+  </ul>
+</body>

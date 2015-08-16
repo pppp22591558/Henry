@@ -7,3 +7,15 @@
 meteor-platform
 autopublish
 insecure
+fourseven:scss
+coffeescript
+urigo:angular
+angularui:angular-ui-router
+angular:angular-animate
+meteorhacks:npm
+angularui:angular-ui-bootstrap
+
+
+npm-container
+twbs:bootstrap
+natestrauser:font-awesome

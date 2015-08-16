@@ -1,0 +1,124 @@
+$black1: #373332;
+$black2: #2a2827;
+$black3: #423e3c;
+$black4: #4a4745;
+$blue: #218bd7;
+$blue-hover: #37ABFF;
+$gray: #717070;
+$gray-hover: #9A9A9A;
+$white: #D0D0D0;
+
+@mixin medium-text {
+  font-size:16px;
+}
+
+@mixin transition {
+  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all ease-in-out;
+  -moz-transition: 0.2s all ease-in-out;
+  -ms-transition: 0.2s all ease-in-out;
+  -o-transition: 0.2s all ease-in-out;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background: $black1;
+}
+
+body, h1, h2, h3, h4, h5, p {
+  color: #5A5A5A;
+}
+
+a{
+  @include transition;
+  &:hover, &:focus{
+    text-decoration: none;
+  }
+}
+
+.main-nav {
+  @include medium-text;
+  width: 120px;
+  color: $gray;
+  background: $black2;
+  float: left;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+
+  li.logo{
+    background-color: $blue;
+    height: 120px;
+    width: 100%;
+    margin-bottom: 86px;
+  }
+
+  li {
+    padding: 0px 20px 20px 20px;
+    &.selected a{
+      color: $blue;
+      &:hover{
+        color: $blue-hover;
+      }
+    }
+    a{
+      color: $gray;
+      &:hover{
+        color: $gray-hover;
+      }
+    }
+  }
+}
+
+.main-content{
+  padding-left: 120px;
+  padding-right: 250px;
+}
+
+.main-shortcuts{
+  float: right;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  right: 0;
+  width: 250px;
+
+  li{
+    background: $black3;
+  }
+
+  li.profile{
+    padding-top: 25px;
+    padding-bottom: 20px;
+    text-align: center;
+    @include medium-text;
+    color: $white;
+    img{
+      margin-bottom: 15px;
+    }
+  }
+
+  li.shortcut-btns{
+    padding-bottom: 30px;
+    padding-top: 10px;
+    &:after{
+      clear:both;
+      content: "";
+      display: block;
+    }
+    .shortcut-btn img{
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      @include transition;
+      opacity: 0.6;
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+}
