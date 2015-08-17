@@ -1,0 +1,32 @@
+$black1: #373332;
+$black2: #292828;
+$black3: #423e3c;
+$black4: #4a4745;
+$blue: #2DA8FF;
+$blue-hover: #37ABFF;
+$blue-text: #218BD7;
+$blue-active: #218BD7;
+$gray: #717070;
+$gray-hover: #9A9A9A;
+$white: #D0D0D0;
+$gray-area: #E4E4E4;
+
+@mixin transition {
+  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all ease-in-out;
+  -moz-transition: 0.2s all ease-in-out;
+  -ms-transition: 0.2s all ease-in-out;
+  -o-transition: 0.2s all ease-in-out;
+}
+
+@mixin floatfix {
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin medium-text {
+  font-size:16px;
+}

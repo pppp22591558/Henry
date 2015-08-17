@@ -1,0 +1,197 @@
+@import "custom";
+
+img.profile-small {
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+  @include transition;
+  opacity: 0.8;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+img.profile-large {
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  @include transition;
+  opacity: 0.8;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+// post style
+ul.cell{
+  margin: 0 auto;
+  width: 970px;
+  padding: 15px 20px 0 20px;
+  a{
+    color: $blue-text;
+    &:hover{
+      color: $blue-hover;
+    }
+  }
+  span.time{
+    float: right;
+    color: $white !important;
+    font-size: 14px !important;
+    font-weight: 300 !important;
+  }
+  @include transition;
+  li.cell-content{
+    @include floatfix;
+    background: white;
+    padding-bottom: 25px;
+    .content-left{
+      position: absolute;
+    }
+    .content-right{
+      width: 930px;
+      padding: 25px 30px 0 135px;
+      float: left;
+      h5.shared{
+        margin-top: 0;
+        font-size: 14px;
+        color:$white;
+        font-weight: 300;
+        span{
+          color: $blue-text;
+          font-weight: 400;
+          font-size: 16px;
+        }
+      }
+      .text{
+        min-height: 60px;
+      }
+      .sharing{
+        height: 102px;
+        border: 1px solid #E4E4E4;
+        @include floatfix;
+
+        &:hover{
+          border: 1px solid $blue-text;
+          @include transition;
+        }
+
+        img{
+          width: 100px;
+          height: 100px;
+          position: absolute;
+          border: none;
+          background-color: $white;
+        }
+        p, h5{
+          float: left;
+          padding-left: 115px;
+          overflow: hidden;
+        }
+        p{
+          height: 40px;
+          margin-bottom: 5px;
+        }
+        h5{
+          margin-top: 18px;
+          min-height: 18px;
+          max-height: 36px;
+        }
+      }
+      ul.social-icons{
+        li{
+          display: inline;
+          margin-right: 10px;
+          margin-top: 15px;
+          color: $blue-text;
+          float: left;
+          &:last-of-type{
+            float: right;
+          }
+        }
+      }
+    }
+    profile-large{
+      img{
+        margin-top: 25px;
+        margin-left: 20px;
+      }
+    }
+  }
+  li.comments{
+    p.previous{
+      background-color: $gray-area;
+      margin: 0;
+      padding-left: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      a{
+        color:$gray;
+        &:hover, &:focus{
+          color: $gray-hover;
+        }
+      }
+    }
+    .comment{
+      @include floatfix;
+      min-height: 90px;
+      background-color: $gray-area;
+      h5{
+        font-weight: 400;
+      }
+      profile-small{
+        img{
+          position: absolute;
+          margin-left: 20px;
+          margin-top: 10px;
+        }
+      }
+      .comment-content{
+        width: 930px;
+        padding-left: 110px;
+        padding-right: 30px;
+        float: left;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1350px) {
+  ul.cell{
+    width: 770px;
+    li.cell-content{
+      .content-right{
+        width: 730px;
+        .sharing{
+          h5{
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    li.comments{
+      .comment{
+        .comment-content{
+          width: 730px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1180px) {
+  ul.cell{
+    width: 600px;
+    li.cell-content{
+      .content-right{
+        width: 560px;
+      }
+    }
+    li.comments{
+      .comment{
+        .comment-content{
+          width: 560px;
+        }
+      }
+    }
+  }
+}

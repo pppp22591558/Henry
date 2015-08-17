@@ -1,24 +1,4 @@
-$black1: #373332;
-$black2: #2a2827;
-$black3: #423e3c;
-$black4: #4a4745;
-$blue: #218bd7;
-$blue-hover: #37ABFF;
-$gray: #717070;
-$gray-hover: #9A9A9A;
-$white: #D0D0D0;
-
-@mixin medium-text {
-  font-size:16px;
-}
-
-@mixin transition {
-  transition: 0.2s all ease-in-out;
-  -webkit-transition: 0.2s all ease-in-out;
-  -moz-transition: 0.2s all ease-in-out;
-  -ms-transition: 0.2s all ease-in-out;
-  -o-transition: 0.2s all ease-in-out;
-}
+@import "custom";
 
 html, body {
   overflow-x: hidden;
