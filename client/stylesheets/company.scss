@@ -1,0 +1,50 @@
+@import "custom";
+.company-info .company-banner{
+  height: 350px;
+  background: $gray;
+  margin: 0 auto;
+  img{
+    position: absolute;
+    top:230px;
+    margin-left: 20px;
+  }
+  .following{
+    position: absolute;
+    text-align: right;
+    top: 270px;
+    padding-right: 20px;
+    button{
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: 300;
+    }
+  }
+}
+
+.company-info .info-content{
+  margin: 0 auto;
+  ul.info-tab{
+    background: $blue;
+    margin: 0;
+    @include floatfix;
+    li{
+      display: inline;
+      float: left;
+      font-weight: 300;
+      color:$white-text;
+      cursor: pointer;
+      padding: 10px;
+      opacity: 0.6;
+      @include transition;
+      &:hover, &.selected{
+        opacity: 1;
+        background-color: $blue-active;
+      }
+    }
+  }
+  .text-area{
+    background: $white-text;
+    padding: 20px;
+    float: left;
+  }
+}

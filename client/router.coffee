@@ -17,5 +17,15 @@ angular.module 'henry'
         templateUrl: 'client/job_cart/views/jobCart-index.ng.html'
         controller: 'jobCartCtrl'
         controllerAs: 'jobCart'
+      .state 'company',
+        url: '/company'
+        templateUrl: 'client/company/views/company.ng.html'
+        abstract: true
+      .state 'company.info',
+        url: '/:id'
+        templateUrl: 'client/company/views/company_info.ng.html'
+        controller: 'companyCtrl'
+        controllerAs: 'company'
+
     $urlRouterProvider.otherwise('/explore')
   ]

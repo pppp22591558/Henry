@@ -1,5 +1,6 @@
 @import "custom";
 
+// profile pic
 img.profile-small {
   height: 70px;
   width: 70px;
@@ -193,5 +194,155 @@ ul.cell{
         }
       }
     }
+  }
+}
+
+//user profile
+
+.profile-bg-pic{
+  background: $gray-area;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.user-card{
+  height: 100px;
+  margin: -70px auto;
+  z-index: 1000;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  ul{
+    display: flex;
+    display: -webkit-flex;
+    background: $blue-active;
+    li{
+      display: inline;
+      height: 100px;
+      float: left;
+      color:$white-text;
+    }
+    li.profile-img{
+      width: 100px;
+      background: $blue-hover;
+    }
+    li.user-info{
+      min-width: 400px;
+      padding-left: 20px;
+      padding-right: 20px;
+      background: $blue;
+      h5, p{
+        color:$white-text;
+      }
+      .title{
+        font-size: 18px;
+      }
+      p{
+        font-weight: 300;
+      }
+      h5{
+        height: 32px;
+        font-weight: 400;
+      }
+    }
+    li.statistics{
+      width: 100px;
+      vertical-align: middle;
+      text-align: center;
+      margin: 0 auto;
+      &:before {
+        content: '';
+        display: inline-block;
+        height: 50%;
+      }
+      .center-text{
+        display: inline-block;
+        vertical-align: middle;
+        .num{
+          font-size: 24px;
+        }
+        a{
+          color:$white-text;
+          opacity: 0.8;
+          &:hover{
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1350px){
+  .user-card ul li.user-info{
+    min-width: 0;
+  }
+}
+
+@media screen and (max-width:1180px) {
+  .user-card{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+//user profile content
+.profile-content{
+  @include floatfix;
+  background: white;
+  margin: 0 auto;
+  margin-top: 40px;
+  .content{
+    float: left;
+    padding-top: 40px;
+    .paragraph{
+      padding: 0 30px 10px 30px;
+      border-bottom: 1px solid $gray-line;
+      @include floatfix;
+      company-logo-large img {
+        float: right;
+        margin-top: -80px;
+      }
+    }
+    .paragraph.experience p{
+      width: 750px;
+      display: inline-block;
+    }
+    h3{
+      color: $blue;
+      font-weight: 400;
+    }
+    p{
+      color: $gray;
+      font-weight: 400;
+    }
+  }
+}
+
+@media screen and (max-width:1350px){
+  .profile-content .content .paragraph.experience p{
+    width: 550px;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:1180px) {
+  .profile-content .content .paragraph.experience p{
+    width: 380px;
+    display: inline-block;
+  }
+}
+
+//skills content
+ul.skills-content{
+  margin-top: 20px;
+  padding-bottom: 20px;
+  li{
+    color:$blue;
+    display: inline;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid $blue;
   }
 }
