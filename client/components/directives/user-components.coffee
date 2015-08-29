@@ -29,3 +29,23 @@ angular.module 'henry'
     restrict: 'E'
     templateUrl: 'client/components/views/user-components/skills-content.ng.html'
   ]
+  .directive 'userToolkit', ['$window', ($window) ->
+    restrict: 'E'
+    templateUrl: 'client/components/views/user-components/user-toolkit.ng.html'
+    link: (scope, elem) ->
+      scope.getOffsetLeft = () ->
+        offset = $('#user-content').offset().left + $('#user-content').width() - 30
+        scope.style =
+          'left' : offset
+        return
+      scope.getOffsetLeft()
+      angular.element($window).bind 'resize', () ->
+        scope.$apply () ->
+          scope.getOffsetLeft()
+        return
+      elem.hover ()->
+        elem.find('li.tool').toggleClass('slideLeft')
+        return
+      return
+      elem.offset.left = 200
+  ]

@@ -112,7 +112,7 @@ a{
   position: fixed;
   right: 0;
   width: 250px;
-
+  z-index: 100;
   li{
     background: $black3;
   }

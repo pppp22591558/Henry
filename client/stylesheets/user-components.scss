@@ -208,7 +208,7 @@ ul.cell{
 .user-card{
   height: 100px;
   margin: -70px auto;
-  z-index: 1000;
+  z-index: 100;
   position: relative;
   padding-left: 30px;
   padding-right: 30px;
@@ -293,7 +293,9 @@ ul.cell{
   background: white;
   margin: 0 auto;
   margin-top: 40px;
+  overflow: hidden;
   .content{
+    overflow: hidden;
     float: left;
     padding-top: 40px;
     .paragraph{
@@ -344,5 +346,50 @@ ul.skills-content{
     padding: 5px;
     border-radius: 5px;
     border: 1px solid $blue;
+  }
+}
+
+
+//toolkit
+ul.toolkit{
+  position: fixed;
+  top:200px;
+  margin: 0;
+  z-index: 100;
+  li{
+    background: $blue;
+    display: inline;
+    float: left;
+    padding: 10px;
+    height: 60px;
+    img{
+      max-width: 40px;
+      max-height: 40px;
+    }
+    i{
+      font-size: 25px;
+      color: white;
+      margin-top: 6px;
+    }
+    &.hidden-toolkit{
+      background-color: $black1;
+      position: absolute;
+      left: 30px;
+      width: 120px;
+    }
+    &.tool.slideLeft{
+      @include transition;
+      transform: translateX(-118px);
+      -webkit-transform: translateX(-118px);
+    }
+    &.tool-open{
+      width: 30px;
+    }
+    &.tool-green{
+      background-color: $green;
+    }
+    &.tool-gray{
+      background-color: $gray-area;
+    }
   }
 }
