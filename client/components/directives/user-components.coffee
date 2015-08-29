@@ -47,5 +47,4 @@ angular.module 'henry'
         elem.find('li.tool').toggleClass('slideLeft')
         return
       return
-      elem.offset.left = 200
   ]
